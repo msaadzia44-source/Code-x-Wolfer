@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code'x Wolfer - Personal Portfolio</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-bs-theme="dark">
+    
+    <!-- Mobile Header -->
+    <header class="mobile-header d-lg-none">
+        <div class="d-flex justify-content-between align-items-center p-3">
+            <h4 class="m-0 fw-bold">Code'x Wolfer</h4>
+            <button class="btn btn-outline-primary mobile-menu-toggle" type="button" aria-label="Toggle navigation">
+                <i class="bi bi-list fs-4"></i>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Sidebar Overlay for Mobile -->
+    <div class="sidebar-overlay d-lg-none"></div>
+    
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-content">
+            <!-- Profile Section -->
+            <div class="profile-section text-center py-4">
+                <div class="profile-image-wrapper">
+                    <img src="assets/images/profile.jpg" alt="Code'x Wolfer" class="profile-image">
+                </div>
+                <h2 class="profile-name mt-3">Code'x Wolfer</h2>
+                <p class="profile-title">Full Stack Developer</p>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <nav class="sidebar-nav">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">
+                            <i class="bi bi-house-door"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">
+                            <i class="bi bi-person"></i>
+                            <span>About</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resume">
+                            <i class="bi bi-file-earmark-text"></i>
+                            <span>Resume</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">
+                            <i class="bi bi-grid"></i>
+                            <span>Portfolio</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">
+                            <i class="bi bi-briefcase"></i>
+                            <span>Services</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">
+                            <i class="bi bi-envelope"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <!-- Footer Social Icons -->
+            <div class="sidebar-footer">
+                <div class="social-icons">
+                    <a href="#" class="social-icon" aria-label="Twitter">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Skype">
+                        <i class="bi bi-skype"></i>
+                    </a>
+                    <button class="social-icon theme-toggle" id="themeToggle" aria-label="Toggle Dark/Light Mode">
+                        <i class="bi bi-sun-fill" id="themeIcon"></i>
+                    </button>
+                </div>
+                <p class="copyright">&copy; 2024 Code'x Wolfer</p>
+            </div>
+        </div>
+    </aside>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        
+        <!-- Hero Section -->
+        <section id="home" class="hero-section d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="hero-content" data-aos="fade-up">
+                            <h1 class="hero-title">Hi, I'm <span class="text-primary">Code'x Wolfer</span></h1>
+                            <div class="typing-container">
+                                <span class="typing-text" id="typingText"></span>
+                                <span class="typing-cursor">|</span>
+                            </div>
+                            <p class="hero-description mt-4">
+                                Passionate about creating elegant solutions to complex problems. 
+                                I transform ideas into reality through clean code and innovative design.
+                            </p>
+                            <div class="hero-buttons mt-5">
+                                <a href="#portfolio" class="btn btn-primary btn-lg me-3">
+                                    <i class="bi bi-grid me-2"></i>View My Work
+                                </a>
+                                <a href="#contact" class="btn btn-outline-primary btn-lg">
+                                    <i class="bi bi-envelope me-2"></i>Get In Touch
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-particles" id="particles"></div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="section-padding">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-underline"></div>
+                    <p class="section-subtitle">Learn more about who I am and what I do</p>
+                </div>
+                
+                <div class="row align-items-center mt-5">
+                    <div class="col-lg-5" data-aos="fade-right">
+                        <div class="about-image-wrapper">
+                            <img src="assets/images/about-image.jpg" alt="About Code'x Wolfer" class="about-image img-fluid">
+                            <div class="experience-badge">
+                                <span class="years">5+</span>
+                                <span class="text">Years of<br>Experience</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7" data-aos="fade-left">
+                        <div class="about-content ps-lg-5">
+                            <h3 class="about-heading">Full Stack Developer & UI/UX Designer</h3>
+                            <p class="about-text">
+                                I'm a passionate developer with expertise in building modern web applications and mobile solutions. 
+                                With a strong foundation in both frontend and backend technologies, I create seamless digital experiences 
+                                that combine beautiful design with robust functionality.
+                            </p>
+                            <p class="about-text">
+                                My journey in tech began with a deep curiosity about how things work on the internet. 
+                                Today, I help businesses and individuals bring their digital visions to life through 
+                                innovative solutions and cutting-edge technologies.
+                            </p>
+                            
+                            <!-- Skills -->
+                            <div class="skills-section mt-4">
+                                <h4 class="skills-title">My Skills</h4>
+                                
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span class="skill-name">HTML/CSS/JavaScript</span>
+                                        <span class="skill-percentage">95%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="95"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span class="skill-name">React & Vue.js</span>
+                                        <span class="skill-percentage">90%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="90"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span class="skill-name">Node.js & Express</span>
+                                        <span class="skill-percentage">85%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="85"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span class="skill-name">Python & Django</span>
+                                        <span class="skill-percentage">80%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="80"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span class="skill-name">UI/UX Design</span>
+                                        <span class="skill-percentage">88%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="88"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Resume Section -->
+        <section id="resume" class="section-padding bg-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Resume</h2>
+                    <div class="section-underline"></div>
+                    <p class="section-subtitle">My educational background and professional experience</p>
+                </div>
+                
+                <div class="row mt-5">
+                    <!-- Education -->
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <div class="resume-column">
+                            <h3 class="resume-heading">
+                                <i class="bi bi-mortarboard"></i>
+                                Education
+                            </h3>
+                            
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <span class="timeline-date">2018 - 2020</span>
+                                        <h4 class="timeline-title">Master of Arts (MA)</h4>
+                                        <p class="timeline-subtitle">Computer Science - Islamic University</p>
+                                        <p class="timeline-description">
+                                            Specialized in advanced algorithms, machine learning, and software architecture. 
+                                            Graduated with honors and published research on distributed systems.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <span class="timeline-date">2014 - 2018</span>
+                                        <h4 class="timeline-title">Bachelor of Science</h4>
+                                        <p class="timeline-subtitle">Software Engineering - Tech University</p>
+                                        <p class="timeline-description">
+                                            Foundation in programming, database management, and software development lifecycle. 
+                                            Completed capstone project on e-commerce platform development.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <span class="timeline-date">2008 - 2014</span>
+                                        <h4 class="timeline-title">Hifz-e-Quran</h4>
+                                        <p class="timeline-subtitle">Islamic Studies Academy</p>
+                                        <p class="timeline-description">
+                                            Completed memorization of the Holy Quran with proper Tajweed. 
+                                            This journey taught me discipline, patience, and the value of consistent effort.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience -->
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <div class="resume-column">
+                            <h3 class="resume-heading">
+                                <i class="bi bi-briefcase"></i>
+                                Experience
+                            </h3>
+                            
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <span class="timeline-date">2022 - Present</span>
+                                        <h4 class="timeline-title">Senior Full Stack Developer</h4>
+                                        <p class="timeline-subtitle">TechVision Solutions</p>
+                                        <p class="timeline-description">
+                                            Leading a team of developers in building enterprise-level web applications. 
+                                            Architecting scalable solutions and mentoring junior developers.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <span class="timeline-date">2020 - 2022</span>
+                                        <h4 class="timeline-title">Full Stack Developer</h4>
+                                        <p class="timeline-subtitle">Digital Innovations Ltd</p>
+                                        <p class="timeline-description">
+                                            Developed and maintained multiple client projects using React, Node.js, and MongoDB. 
+                                            Implemented CI/CD pipelines and improved application performance by 40%.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <span class="timeline-date">2018 - 2020</span>
+                                        <h4 class="timeline-title">Junior Web Developer</h4>
+                                        <p class="timeline-subtitle">StartUp Hub</p>
+                                        <p class="timeline-description">
+                                            Built responsive websites and web applications for various clients. 
+                                            Gained hands-on experience with modern frontend frameworks and RESTful APIs.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Download CV Button -->
+                <div class="text-center mt-5" data-aos="fade-up">
+                    <a href="#" class="btn btn-primary btn-lg">
+                        <i class="bi bi-download me-2"></i>Download CV
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="section-padding">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Portfolio</h2>
+                    <div class="section-underline"></div>
+                    <p class="section-subtitle">Check out some of my latest projects</p>
+                </div>
+                
+                <!-- Portfolio Filters -->
+                <div class="portfolio-filters" data-aos="fade-up">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="app">App</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="card">Card</button>
+                </div>
+                
+                <!-- Portfolio Grid -->
+                <div class="portfolio-grid" data-aos="fade-up">
+                    <!-- App Project 1 -->
+                    <div class="portfolio-item" data-category="app">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <img src="assets/images/project-app-1.jpg" alt="FitTrack Pro App">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-actions">
+                                        <button class="portfolio-btn view-details" data-project="fittrack">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                        <a href="#" class="portfolio-btn">
+                                            <i class="bi bi-link-45deg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h4 class="portfolio-title">FitTrack Pro</h4>
+                                <p class="portfolio-category">Mobile App</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Web Project 1 -->
+                    <div class="portfolio-item" data-category="web">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <img src="assets/images/project-web-1.jpg" alt="ShopEase E-commerce">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-actions">
+                                        <button class="portfolio-btn view-details" data-project="shopease">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                        <a href="#" class="portfolio-btn">
+                                            <i class="bi bi-link-45deg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h4 class="portfolio-title">ShopEase</h4>
+                                <p class="portfolio-category">E-commerce Website</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card Project 1 -->
+                    <div class="portfolio-item" data-category="card">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <img src="assets/images/project-card-1.jpg" alt="Alistair Finch Business Card">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-actions">
+                                        <button class="portfolio-btn view-details" data-project="businesscard">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                        <a href="#" class="portfolio-btn">
+                                            <i class="bi bi-link-45deg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h4 class="portfolio-title">Alistair Finch Branding</h4>
+                                <p class="portfolio-category">Business Card Design</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- App Project 2 -->
+                    <div class="portfolio-item" data-category="app">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <img src="assets/images/project-app-2.jpg" alt="SocialConnect App">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-actions">
+                                        <button class="portfolio-btn view-details" data-project="socialconnect">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                        <a href="#" class="portfolio-btn">
+                                            <i class="bi bi-link-45deg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h4 class="portfolio-title">SocialConnect</h4>
+                                <p class="portfolio-category">Social Media App</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Web Project 2 -->
+                    <div class="portfolio-item" data-category="web">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <img src="assets/images/project-web-2.jpg" alt="DataViz Dashboard">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-actions">
+                                        <button class="portfolio-btn view-details" data-project="dataviz">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                        <a href="#" class="portfolio-btn">
+                                            <i class="bi bi-link-45deg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h4 class="portfolio-title">DataViz Dashboard</h4>
+                                <p class="portfolio-category">Analytics Platform</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Web Project 3 -->
+                    <div class="portfolio-item" data-category="web">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <img src="assets/images/project-web-3.jpg" alt="Ignite Creative Agency">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-actions">
+                                        <button class="portfolio-btn view-details" data-project="ignite">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                        <a href="#" class="portfolio-btn">
+                                            <i class="bi bi-link-45deg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h4 class="portfolio-title">Ignite Creative</h4>
+                                <p class="portfolio-category">Agency Website</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card Project 2 -->
+                    <div class="portfolio-item" data-category="card">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <img src="assets/images/project-card-2.jpg" alt="Wedding Invitation">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-actions">
+                                        <button class="portfolio-btn view-details" data-project="wedding">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                        <a href="#" class="portfolio-btn">
+                                            <i class="bi bi-link-45deg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h4 class="portfolio-title">Eternal Love</h4>
+                                <p class="portfolio-category">Wedding Invitation</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- App Project 3 -->
+                    <div class="portfolio-item" data-category="app">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <img src="assets/images/project-app-3.jpg" alt="Foodie Express App">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-actions">
+                                        <button class="portfolio-btn view-details" data-project="foodie">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                        <a href="#" class="portfolio-btn">
+                                            <i class="bi bi-link-45deg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h4 class="portfolio-title">Foodie Express</h4>
+                                <p class="portfolio-category">Food Delivery App</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Services Section -->
+        <section id="services" class="section-padding bg-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Services</h2>
+                    <div class="section-underline"></div>
+                    <p class="section-subtitle">What I can do for you</p>
+                </div>
+                
+                <div class="row mt-5">
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="bi bi-laptop"></i>
+                            </div>
+                            <h4 class="service-title">Web Development</h4>
+                            <p class="service-description">
+                                Custom websites and web applications built with modern technologies. 
+                                Responsive, fast, and optimized for search engines.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="bi bi-phone"></i>
+                            </div>
+                            <h4 class="service-title">Mobile App Development</h4>
+                            <p class="service-description">
+                                Native and cross-platform mobile applications for iOS and Android. 
+                                Intuitive interfaces with smooth user experiences.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="bi bi-palette"></i>
+                            </div>
+                            <h4 class="service-title">UI/UX Design</h4>
+                            <p class="service-description">
+                                Beautiful and functional user interfaces that delight users. 
+                                From wireframes to high-fidelity prototypes.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="bi bi-shop"></i>
+                            </div>
+                            <h4 class="service-title">E-commerce Solutions</h4>
+                            <p class="service-description">
+                                Complete online store solutions with payment integration, 
+                                inventory management, and customer analytics.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="bi bi-graph-up-arrow"></i>
+                            </div>
+                            <h4 class="service-title">SEO Optimization</h4>
+                            <p class="service-description">
+                                Improve your website's visibility on search engines. 
+                                Technical SEO, content strategy, and performance optimization.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="bi bi-tools"></i>
+                            </div>
+                            <h4 class="service-title">Maintenance & Support</h4>
+                            <p class="service-description">
+                                Ongoing support and maintenance for your digital products. 
+                                Regular updates, security patches, and feature enhancements.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Contact</h2>
+                    <div class="section-underline"></div>
+                    <p class="section-subtitle">Get in touch with me</p>
+                </div>
+                
+                <div class="row mt-5">
+                    <!-- Contact Info -->
+                    <div class="col-lg-5" data-aos="fade-right">
+                        <div class="contact-info">
+                            <h3 class="contact-heading">Let's Talk</h3>
+                            <p class="contact-text">
+                                Have a project in mind or just want to say hello? 
+                                Feel free to reach out. I'm always open to discussing new projects, 
+                                creative ideas, or opportunities to be part of your vision.
+                            </p>
+                            
+                            <div class="contact-items">
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="bi bi-geo-alt"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h5>Location</h5>
+                                        <p>123 Tech Street, Digital City, DC 12345</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="bi bi-envelope"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h5>Email</h5>
+                                        <p>contact@codexwolfer.com</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="bi bi-telephone"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h5>Phone</h5>
+                                        <p>+1 (555) 123-4567</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div class="col-lg-7" data-aos="fade-left">
+                        <div class="contact-form-wrapper">
+                            <form id="contactForm" class="contact-form">
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-group">
+                                            <label for="name" class="form-label">Your Name</label>
+                                            <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-group">
+                                            <label for="email" class="form-label">Your Email</label>
+                                            <input type="email" class="form-control" id="email" name="email" placeholder="john@example.com" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <div class="form-group">
+                                        <label for="subject" class="form-label">Subject</label>
+                                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Project Inquiry" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <div class="form-group">
+                                        <label for="message" class="form-label">Message</label>
+                                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                                    </div>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-lg w-100">
+                                    <i class="bi bi-send me-2"></i>Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <p class="footer-text">
+                            &copy; 2024 <strong>Code'x Wolfer</strong>. All Rights Reserved.
+                        </p>
+                        <p class="footer-credit">
+                            Designed with <i class="bi bi-heart-fill text-danger"></i> by Code'x Wolfer
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    
+    <!-- Project Detail Modal -->
+    <div class="modal fade" id="projectModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectModalTitle">Project Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="projectModalImage" src="" alt="" class="img-fluid rounded mb-4">
+                    <div id="projectModalContent">
+                        <!-- Content will be dynamically loaded -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="#" class="btn btn-primary" id="projectModalLink" target="_blank">
+                        <i class="bi bi-box-arrow-up-right me-2"></i>View Live
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
